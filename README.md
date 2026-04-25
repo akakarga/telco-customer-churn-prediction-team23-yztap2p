@@ -310,3 +310,5 @@ Logistic Regression katsayıları analiz edilerek ayrılma kararını etkileyen 
 ## Sonuç
 
 Bu proje, ham veriden başlayarak eğitilebilir, açıklanabilir ve taşınabilir bir makine öğrenmesi sistemi ortaya koymuştur. Scikit-Learn Pipeline mimarisi veri dönüşümlerini otomatikleştirir, Pydantic şemaları API girdilerini doğrular, Docker ise farklı ortamlarda tutarlı çalışmayı kolaylaştırır.
+   
+ 

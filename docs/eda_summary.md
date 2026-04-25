@@ -160,3 +160,5 @@ Tüm ön işleme adımları Scikit-Learn `ColumnTransformer` ve `Pipeline` yapı
 - 14 sütun target leakage veya bilgi taşımama nedeniyle çıkarılmıştır.
 - Modelleme 19 özellik üzerinden, sınıf dengesizliği gözetilerek yapılmıştır.
 - Verinin genel kalitesi yüksektir; ciddi bir anomali veya aykırı değer problemi tespit edilmemiştir.
+   
+ 
