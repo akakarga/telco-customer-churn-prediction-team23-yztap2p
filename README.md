@@ -156,7 +156,7 @@ python -m pip install -r requirements.txt
 
 ## Demo için hızlı başlangıç
 
-Projeyi jüriye sunacaksanız aşağıdaki 4 adımı izleyin. Hazırlık süresi yaklaşık 2 dakika.
+Sunum için aşağıdaki 4 adımı izleyin. Hazırlık süresi yaklaşık 2 dakika.
 
 ### Adım 1 — Modeli eğitin
 
