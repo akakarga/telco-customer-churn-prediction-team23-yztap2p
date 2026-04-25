@@ -1,0 +1,29 @@
+feature,coefficient,effect
+Internet Service_Fiber optic,0.91249393658329,Churn riskini artırabilir
+Total Charges,0.6325314014234992,Churn riskini artırabilir
+Payment Method_Electronic check,0.408116513361678,Churn riskini artırabilir
+Streaming TV_Yes,0.3328463040050617,Churn riskini artırabilir
+Multiple Lines_Yes,0.31894272867809553,Churn riskini artırabilir
+Streaming Movies_Yes,0.31697268546609764,Churn riskini artırabilir
+Paperless Billing_Yes,0.24165915947779237,Churn riskini artırabilir
+Partner_Yes,0.21767431201350482,Churn riskini artırabilir
+Senior Citizen_Yes,0.07845758431970115,Churn riskini artırabilir
+Payment Method_Credit card (automatic),0.06826838209208248,Churn riskini artırabilir
+Multiple Lines_No phone service,0.05274126040494721,Churn riskini artırabilir
+Payment Method_Mailed check,0.0454523679928998,Churn riskini artırabilir
+Device Protection_Yes,0.024165794232128904,Churn riskini artırabilir
+Dependents_Yes,-1.625760201798694,Churn riskini azaltabilir
+Contract_Two year,-1.4276042821536021,Churn riskini azaltabilir
+Tenure Months,-1.309819709979854,Churn riskini azaltabilir
+Contract_One year,-0.8440424866668594,Churn riskini azaltabilir
+Phone Service_Yes,-0.3556510699709043,Churn riskini azaltabilir
+Tech Support_Yes,-0.33732279816837335,Churn riskini azaltabilir
+Online Security_Yes,-0.334858771619647,Churn riskini azaltabilir
+Monthly Charges,-0.33006618072536237,Churn riskini azaltabilir
+Streaming TV_No internet service,-0.14466875128094409,Churn riskini azaltabilir
+Online Security_No internet service,-0.14466875128094409,Churn riskini azaltabilir
+Online Backup_No internet service,-0.14466875128094409,Churn riskini azaltabilir
+Device Protection_No internet service,-0.14466875128094409,Churn riskini azaltabilir
+Streaming Movies_No internet service,-0.14466875128094409,Churn riskini azaltabilir
+Tech Support_No internet service,-0.14466875128094409,Churn riskini azaltabilir
+Internet Service_No,-0.14466875128094409,Churn riskini azaltabilir

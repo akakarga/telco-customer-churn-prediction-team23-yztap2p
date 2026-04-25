@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.env
+.venv/
+venv/
+.ipynb_checkpoints/
+.DS_Store
+*.bak
+YZTA_5.0_P2P_2.docx
