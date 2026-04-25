@@ -18,14 +18,14 @@ Telekomünikasyon sektöründe yeni müşteri kazanmanın maliyeti, mevcut müş
 
 ## Kullanılan teknolojiler
 
-| Katman | Teknoloji |
-|---|---|
-| Veri İşleme | Pandas, NumPy |
-| Modelleme | Scikit-Learn (Pipeline + ColumnTransformer) |
-| API | FastAPI, Uvicorn, Pydantic |
-| Frontend | Streamlit |
-| Konteyner | Docker |
-| Test | pytest |
+| Katman      | Teknoloji                                   |
+| ----------- | ------------------------------------------- |
+| Veri İşleme | Pandas, NumPy                               |
+| Modelleme   | Scikit-Learn (Pipeline + ColumnTransformer) |
+| API         | FastAPI, Uvicorn, Pydantic                  |
+| Frontend    | Streamlit                                   |
+| Konteyner   | Docker                                      |
+| Test        | pytest                                      |
 
 ---
 
@@ -69,19 +69,19 @@ P2P/
 
 Jüri sunumu, teknik özet ve veri analizi `docs/` klasöründedir:
 
-* [docs/eda_summary.md](docs/eda_summary.md) — Veri setinin yapısı, dağılımları, eksik değerler ve target leakage analizini içeren keşifsel veri analizi özeti.
-* [docs/demo_script.md](docs/demo_script.md) — 3-5 dakikalık demo akışı, zamanlama ve konuşma metinleri.
-* [docs/project_summary.md](docs/project_summary.md) — Teknoloji, mimari ve model seçim kararlarını özetleyen teknik belge.
+- [docs/eda_summary.md](docs/eda_summary.md) — Veri setinin yapısı, dağılımları, eksik değerler ve target leakage analizini içeren keşifsel veri analizi özeti.
+- [docs/demo_script.md](docs/demo_script.md) — 3-5 dakikalık demo akışı, zamanlama ve konuşma metinleri.
+- [docs/project_summary.md](docs/project_summary.md) — Teknoloji, mimari ve model seçim kararlarını özetleyen teknik belge.
 
 ---
 
 ## Veri ön işleme
 
-| Adım | Açıklama |
-|---|---|
-| Veri Temizleme | `Total Charges` sütunundaki boşluk karakterleri `NaN`'a dönüştürüldü, 11 eksik satır çıkarıldı. |
-| Target Leakage Önleme | `Churn Label`, `Churn Score`, `CLTV`, `Churn Reason`, koordinat ve kimlik bilgileri gibi sızıntı/gürültü kolonları kaldırıldı. |
-| Dönüşüm | Sayısal değişkenlere `StandardScaler`, kategorik değişkenlere `OneHotEncoder` uygulandı. Tüm adımlar Scikit-Learn Pipeline ile tek çatı altında birleştirildi. |
+| Adım                  | Açıklama                                                                                                                                                       |
+| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Veri Temizleme        | `Total Charges` sütunundaki boşluk karakterleri `NaN`'a dönüştürüldü, 11 eksik satır çıkarıldı.                                                                |
+| Target Leakage Önleme | `Churn Label`, `Churn Score`, `CLTV`, `Churn Reason`, koordinat ve kimlik bilgileri gibi sızıntı/gürültü kolonları kaldırıldı.                                 |
+| Dönüşüm               | Sayısal değişkenlere `StandardScaler`, kategorik değişkenlere `OneHotEncoder` uygulandı. Tüm adımlar Scikit-Learn Pipeline ile tek çatı altında birleştirildi. |
 
 > Pipeline kullanmanın avantajı: Yeni veri geldiğinde ön işleme adımları otomatik tekrarlanır, eğitim ve tahmin arasındaki tutarsızlık riski büyük ölçüde ortadan kalkar.
 
@@ -97,11 +97,11 @@ Jüri sunumu, teknik özet ve veri analizi `docs/` klasöründedir:
 
 ### Model karşılaştırma sonuçları
 
-| Model | Accuracy | Precision | Recall | F1-Score | ROC-AUC |
-| :--- | :---: | :---: | :---: | :---: | :---: |
-| Logistic Regression | 0.729 | 0.494 | **0.786** | **0.606** | 0.842 |
-| Random Forest | 0.795 | 0.641 | 0.521 | 0.575 | 0.825 |
-| Gradient Boosting | **0.798** | **0.643** | 0.545 | 0.590 | **0.847** |
+| Model               | Accuracy  | Precision |  Recall   | F1-Score  |  ROC-AUC  |
+| :------------------ | :-------: | :-------: | :-------: | :-------: | :-------: |
+| Logistic Regression |   0.729   |   0.494   | **0.786** | **0.606** |   0.842   |
+| Random Forest       |   0.795   |   0.641   |   0.521   |   0.575   |   0.825   |
+| Gradient Boosting   | **0.798** | **0.643** |   0.545   |   0.590   | **0.847** |
 
 ### Neden Logistic Regression seçildi?
 
@@ -120,14 +120,14 @@ Bu sorunun karşılığı Recall metriğidir. Yakalayamadığımız her müşter
 
 Proje FastAPI üzerinde 6 endpoint sunar. Swagger UI (`/docs`) üzerinden hepsi test edilebilir.
 
-| Method | Endpoint | Açıklama |
-|---|---|---|
-| `GET` | `/` | API durumu (Online/Offline) |
-| `GET` | `/health` | Sağlık kontrolü ve model yükleme durumu |
-| `GET` | `/features` | Modelin beklediği feature listesi |
-| `GET` | `/model-info` | Model adı, seçim gerekçesi ve performans metrikleri |
-| `POST` | `/predict` | Tekil müşteri tahmini: prediction, olasılık, risk seviyesi |
-| `POST` | `/batch-predict` | Toplu tahmin (JSON array): her müşteri için risk profili |
+| Method | Endpoint         | Açıklama                                                   |
+| ------ | ---------------- | ---------------------------------------------------------- |
+| `GET`  | `/`              | API durumu (Online/Offline)                                |
+| `GET`  | `/health`        | Sağlık kontrolü ve model yükleme durumu                    |
+| `GET`  | `/features`      | Modelin beklediği feature listesi                          |
+| `GET`  | `/model-info`    | Model adı, seçim gerekçesi ve performans metrikleri        |
+| `POST` | `/predict`       | Tekil müşteri tahmini: prediction, olasılık, risk seviyesi |
+| `POST` | `/batch-predict` | Toplu tahmin (JSON array): her müşteri için risk profili   |
 
 ---
 
@@ -148,6 +148,7 @@ python -m pip install -r requirements.txt
 ```
 
 > `requirements.txt` minimum bağımlılıkları içerir ve normal kurulum için yeterlidir. Tam sürüm tekrarlanabilirliği (reproducibility) için `requirements.lock.txt` dosyasını kullanabilirsiniz:
+>
 > ```bash
 > python -m pip install -r requirements.lock.txt
 > ```
@@ -166,7 +167,7 @@ python src/train.py
 
 3 model eğitilir, metrikleri konsola yazdırılır ve en iyi pipeline `models/` klasörüne kaydedilir.
 
-### Adım 2 — API'yi başlatın *(yeni terminal)*
+### Adım 2 — API'yi başlatın _(yeni terminal)_
 
 ```bash
 python -m uvicorn app.main:app --reload
@@ -174,7 +175,7 @@ python -m uvicorn app.main:app --reload
 
 Swagger UI: `http://127.0.0.1:8000/docs`
 
-### Adım 3 — Streamlit dashboard'u başlatın *(yeni terminal)*
+### Adım 3 — Streamlit dashboard'u başlatın _(yeni terminal)_
 
 ```bash
 python -m streamlit run streamlit_app.py
@@ -197,13 +198,13 @@ docker run -p 8501:8501 telco-churn-api sh -c "python src/train.py && python -m 
 
 ## Streamlit dashboard özellikleri
 
-| Sekme | Ne yapar |
-|---|---|
-| Ana Sayfa | Proje akışı, kullanılan teknolojiler ve jüri demo rehberi |
+| Sekme               | Ne yapar                                                                     |
+| ------------------- | ---------------------------------------------------------------------------- |
+| Ana Sayfa           | Proje akışı, kullanılan teknolojiler ve jüri demo rehberi                    |
 | Tek Müşteri Tahmini | Form tabanlı girdi, anlık tahmin, olasılık, risk seviyesi ve aksiyon önerisi |
-| Toplu CSV Tahmini | CSV yükleme, toplu tahmin, risk dağılımı tablosu ve CSV indirme |
-| Model Performansı | 3 model metrik karşılaştırması, grafikler ve Feature Importance analizi |
-| Proje Hakkında | Veri seti detayları, mimari ve teknik kararlar |
+| Toplu CSV Tahmini   | CSV yükleme, toplu tahmin, risk dağılımı tablosu ve CSV indirme              |
+| Model Performansı   | 3 model metrik karşılaştırması, grafikler ve Feature Importance analizi      |
+| Proje Hakkında      | Veri seti detayları, mimari ve teknik kararlar                               |
 
 ---
 
@@ -251,25 +252,25 @@ docker run -p 8501:8501 telco-churn-api sh -c "python src/train.py && python -m 
 
 ```json
 {
-    "Gender": "Male",
-    "Senior Citizen": "No",
-    "Partner": "No",
-    "Dependents": "No",
-    "Tenure Months": 2,
-    "Phone Service": "Yes",
-    "Multiple Lines": "No",
-    "Internet Service": "DSL",
-    "Online Security": "Yes",
-    "Online Backup": "Yes",
-    "Device Protection": "No",
-    "Tech Support": "No",
-    "Streaming TV": "No",
-    "Streaming Movies": "No",
-    "Contract": "Month-to-month",
-    "Paperless Billing": "Yes",
-    "Payment Method": "Mailed check",
-    "Monthly Charges": 53.85,
-    "Total Charges": 108.15
+  "Gender": "Male",
+  "Senior Citizen": "No",
+  "Partner": "No",
+  "Dependents": "No",
+  "Tenure Months": 2,
+  "Phone Service": "Yes",
+  "Multiple Lines": "No",
+  "Internet Service": "DSL",
+  "Online Security": "Yes",
+  "Online Backup": "Yes",
+  "Device Protection": "No",
+  "Tech Support": "No",
+  "Streaming TV": "No",
+  "Streaming Movies": "No",
+  "Contract": "Month-to-month",
+  "Paperless Billing": "Yes",
+  "Payment Method": "Mailed check",
+  "Monthly Charges": 53.85,
+  "Total Charges": 108.15
 }
 ```
 
@@ -286,12 +287,12 @@ docker run -p 8501:8501 telco-churn-api sh -c "python src/train.py && python -m 
 
 Her yanıt şu alanları içerir:
 
-| Alan | Açıklama |
-|---|---|
-| `prediction` | 0 (Kalmaya devam) veya 1 (Ayrılma riski) |
-| `prediction_label` | İnsan tarafından okunabilir etiket |
-| `churn_probability` | 0.0 – 1.0 arası ayrılma olasılığı |
-| `risk_level` | Low Risk (≤0.40), Medium Risk (0.40-0.70), High Risk (>0.70) |
+| Alan                | Açıklama                                                     |
+| ------------------- | ------------------------------------------------------------ |
+| `prediction`        | 0 (Kalmaya devam) veya 1 (Ayrılma riski)                     |
+| `prediction_label`  | İnsan tarafından okunabilir etiket                           |
+| `churn_probability` | 0.0 – 1.0 arası ayrılma olasılığı                            |
+| `risk_level`        | Low Risk (≤0.40), Medium Risk (0.40-0.70), High Risk (>0.70) |
 
 ---
 

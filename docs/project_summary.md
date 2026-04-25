@@ -2,11 +2,11 @@
 
 ## 1. Teknolojiler ve araçlar
 
-* **Dil:** Python 3.9+
-* **Veri ve modelleme:** pandas, scikit-learn
-* **API:** FastAPI, Uvicorn, Pydantic
-* **Dashboard:** Streamlit
-* **Konteynerizasyon:** Docker
+- **Dil:** Python 3.9+
+- **Veri ve modelleme:** pandas, scikit-learn
+- **API:** FastAPI, Uvicorn, Pydantic
+- **Dashboard:** Streamlit
+- **Konteynerizasyon:** Docker
 
 ## 2. Denenen modeller ve model seçimi
 
@@ -20,11 +20,11 @@ En iyi Recall/F1 dengesini veren ve katsayıları yorumlanabilir olan Logistic R
 
 Proje FastAPI tabanlı bir API üzerinden çalışır. Mevcut endpointler:
 
-* `GET /health`: Sistemin ve modelin çalışıp çalışmadığını kontrol eder.
-* `GET /features`: Modelin beklediği özelliklerin listesini döndürür.
-* `GET /model-info`: Eğitilmiş modelin metriklerini ve performans bilgilerini verir.
-* `POST /predict`: Tek bir müşteri verisi alır, ayrılma ihtimalini döndürür.
-* `POST /batch-predict`: Birden fazla müşteri verisini alır, toplu risk değerlendirmesi yapar (Low, Medium, High).
+- `GET /health`: Sistemin ve modelin çalışıp çalışmadığını kontrol eder.
+- `GET /features`: Modelin beklediği özelliklerin listesini döndürür.
+- `GET /model-info`: Eğitilmiş modelin metriklerini ve performans bilgilerini verir.
+- `POST /predict`: Tek bir müşteri verisi alır, ayrılma ihtimalini döndürür.
+- `POST /batch-predict`: Birden fazla müşteri verisini alır, toplu risk değerlendirmesi yapar (Low, Medium, High).
 
 ## 4. Açıklanabilirlik (Explainability)
 

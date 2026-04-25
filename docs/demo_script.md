@@ -48,7 +48,7 @@ Kaçırdığımız her müşteri gelir kaybı demek. Logistic Regression, sını
 
 "Modeli FastAPI ile bir web servisi haline getirdik."
 
-*(Tarayıcıda `http://127.0.0.1:8000/docs` sayfasını gösterin)*
+_(Tarayıcıda `http://127.0.0.1:8000/docs` sayfasını gösterin)_
 
 "Buradaki Swagger arayüzünden tüm endpointleri deneyebilirsiniz. Gelen veri Pydantic ile doğrulanıyor; eksik veya yanlış formatta bir alan varsa API hata mesajı dönüyor."
 
@@ -56,13 +56,13 @@ Kaçırdığımız her müşteri gelir kaybı demek. Logistic Regression, sını
 
 ## 6. Streamlit dashboard, tekil tahmin (45 sn)
 
-*(Streamlit ekranında "Tek Müşteri Tahmini" sekmesini açın)*
+_(Streamlit ekranında "Tek Müşteri Tahmini" sekmesini açın)_
 
 **Konuşmacı:**
 
 "Modeli kullanmak için bir de Streamlit arayüzü hazırladık. Şimdi örnek bir müşteri giriyorum..."
 
-*(Formu doldurup "Tahmin Et" butonuna basın)*
+_(Formu doldurup "Tahmin Et" butonuna basın)_
 
 "Sonuç sadece ayrılır veya ayrılmaz demiyor; ayrılma olasılığını, risk seviyesini ve buna göre bir aksiyon önerisini de gösteriyor. Yani iş birimi bu çıktıyı alıp doğrudan kullanabilir."
 
@@ -70,7 +70,7 @@ Kaçırdığımız her müşteri gelir kaybı demek. Logistic Regression, sını
 
 ## 7. Toplu CSV tahmini (40 sn)
 
-*(Streamlit ekranında "Toplu CSV Tahmini" sekmesini açın ve `sample_customers.csv` dosyasını yükleyin)*
+_(Streamlit ekranında "Toplu CSV Tahmini" sekmesini açın ve `sample_customers.csv` dosyasını yükleyin)_
 
 **Konuşmacı:**
 
@@ -82,7 +82,7 @@ Birkaç saniye içinde hepsinin risk profili hesaplandı. Düşük, orta ve yük
 
 ## 8. Feature Importance, açıklanabilirlik (30 sn)
 
-*(Streamlit ekranında "Model Performansı" sekmesine geçin, aşağı kaydırın)*
+_(Streamlit ekranında "Model Performansı" sekmesine geçin, aşağı kaydırın)_
 
 **Konuşmacı:**
 
